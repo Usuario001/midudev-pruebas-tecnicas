@@ -1,0 +1,14 @@
+services:
+  midudev-challenges:
+    image: usuario001/docker-base-react:latest
+    container_name: midudev-challenges
+    working_dir: /home/jp/app
+    volumes:
+      - .:/home/jp/app
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+    environment:
+      - NODE_VERSION=v23.6.0
+    stdin_open: true
+    tty: true
